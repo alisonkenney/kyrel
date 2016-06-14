@@ -22,3 +22,61 @@ function main(n) {
     erase();
 
 } // END MAIN
+
+
+
+SOLUTIONS DAY 2:
+
+Problem 1:
+var initial_state =  ['b', 'b', 'b', 'b', 'b'];
+
+function main(n) {
+
+    moveRight();
+    erase();
+    moveRight();
+    moveRight();
+    erase();
+
+} // END MAIN
+
+Problem 2:
+var initial_state =  ['g', 'g', 'g', '.', '.'];
+
+function main(n) {
+
+    moveRight();
+    useBlue();
+    draw();
+    moveRight();
+    moveRight();
+    useBlue();
+    draw();
+
+} // END MAIN
+
+Problem 3:
+var initial_state = ['.', '.', '.', '.', '.'];
+
+function main(n) {
+
+    if (onBlue()) {
+      erase();
+      moveRight();
+      moveRight();
+      moveRight();
+      moveRight();
+      useBlue();
+      draw();
+    } else if (onGreen()) {
+      erase();
+      moveRight();
+      moveRight();
+      moveRight();
+      moveRight();
+      useGreen();
+      draw();
+    } else {
+    }
+
+} // END MAIN
