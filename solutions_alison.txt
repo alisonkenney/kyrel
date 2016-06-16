@@ -80,3 +80,95 @@ function main(n) {
     }
 
 } // END MAIN
+
+SOLUTIONS DAY 3:
+
+Problem 1 - all_blue
+var initial_state = ['.', '.', '.', '.', '.'];
+
+function main(n) {
+
+  useBlue();
+  for(n=0; n<initial_state.length; n++) {
+    draw();
+    moveRight();
+
+} // END MAIN
+
+Problem 2 - all_first_color
+var initial_state = ['g', '.', '.', '.', '.'];
+
+function main(n) {
+
+if (onGreen()) {
+  useGreen();
+}else if (onBlue()) {
+  useBlue();
+}
+
+for (var n=0; n < 5; n++) {
+      draw();
+      moveRight();
+
+    }   
+
+} // END MAIN
+
+Problem 3 - n_in_a_row
+var initial_state = ['.', '.', '.', '.', '.'];
+
+function main(n) {
+
+var n = 3;
+
+useBlue();
+  for (var i=0; i<n; i++) {
+    draw();
+    moveRight();
+  }  
+
+} // END MAIN
+
+Problem 4 - every_even_erase
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main(n) {
+
+for(var i=0; i<5; i++){
+    if ( i%2 === 0 ){
+        erase();
+    }
+    moveRight();
+}
+
+} // END MAIN
+
+Problem 5 - every_odd_erase
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main(n) {
+
+for(var i=0; i<5; i++){
+    if ( i%2 !== 0 ){
+        erase();
+    }
+    moveRight();
+}
+
+} // END MAIN
+
+Problem 6 - every_n_erase
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main(n) {
+
+var n = 2; 
+
+for(var i=0; i<5; i++){
+    if ( (i+1)%n === 0 ){
+        erase();
+    }
+    moveRight();
+}  
+
+} // END MAIN
