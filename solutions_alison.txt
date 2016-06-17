@@ -172,3 +172,73 @@ for(var i=0; i<5; i++){
 }  
 
 } // END MAIN
+
+SOLUTIONS DAY 4
+
+Problem 1 - bleed_right
+var initial_state = ['.', '.', 'b', '.', '.'];
+
+function main(n) {
+
+  kyrel.color = null;
+
+  for (var i=0; i < 5; i++) {
+      
+      if (onBlue()) {
+        useBlue();
+      } else if (onGreen()) {
+        useGreen();
+      } else {
+        draw();
+      } 
+
+      moveRight();
+
+    }
+  
+} // END MAIN
+
+Problem 2 - invert_colors
+var initial_state = ['b', 'g', '.', 'b', 'g'];
+
+function main(n) {
+
+  for (var i=0; i < 5; i++) {
+      
+      if (onBlue()) {
+        useGreen();
+        draw();
+      } else if (onGreen()) {
+        useBlue();
+        draw();
+      } 
+
+      moveRight();
+
+    }  
+
+} // END MAIN
+
+Problem 3 - reverse_row
+var initial_state = ['b', '.', '.', 'b', 'g'];
+
+function main(n) {
+
+  var reverse = initial_state.reverse();
+  
+  for (var i=0; i < 5; i++){
+    if (reverse[i] === 'g') {
+      useGreen();
+      draw();
+    } else if (reverse[i] === 'b') {
+      useBlue();
+      draw();
+    } else {
+      erase();
+    }
+    moveRight();
+  }
+
+} // END MAIN
+
+
