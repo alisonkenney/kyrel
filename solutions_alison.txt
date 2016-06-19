@@ -241,4 +241,79 @@ function main(n) {
 
 } // END MAIN
 
+SOLUTIONS DAY 5
+
+Problem 1 - move_the_blue_dot_right
+var initial_state = ['g', 'b', '.', '.', '.'];
+
+function main(n) {
+
+  for (var i=0; i < 5; i++){
+    if (onBlue()) {
+      erase();
+      moveRight();
+      draw();
+      break;
+    }else if(onGreen()) {
+      moveRight();
+    }else {
+      moveRight();
+    }
+  }
+  
+} // END MAIN
+
+Problem 2 - delete_before
+var initial_state = ['g', 'b', 'b', '.', '.'];
+
+function main(n) {
+  
+  for (var i=0; i<5; i++) {
+    if (onBlue()) {
+      moveLeft();
+      erase();
+      moveRight();
+    }
+    moveRight();
+  }  
+
+} // END MAIN
+
+Problem 3 - blues_right
+var initial_state = ['b', '.', 'b', '.', '.'];
+
+function main(n) {
+  
+  useBlue();
+
+  for (var i=0; i<5; i++) {
+    erase();
+    moveRight();
+    moveRight();
+    erase();
+    moveRight();
+    draw();
+    moveRight();
+    draw();
+  }
+
+} // END MAIN
+
+Problem 4 - blues_left
+var initial_state = ['.', 'b', 'b', '.', 'b'];
+
+function main(n) {
+
+for(var i=0; i<5; i++) {
+  useBlue();
+  draw();
+  moveRight();
+  moveRight();
+  moveRight();
+  moveRight();
+  erase();
+}
+
+} // END MAIN
+
 
